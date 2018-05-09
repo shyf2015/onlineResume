@@ -13,13 +13,13 @@ export const initDataBase = async ()=>{
             major:"灵魂力",
             workYears:"在校生",
             homeTown:"天痕",
-            currentCity:"关辉",
+            currentCity:"光辉",
             phone:"11111111111",
             email:"11111111111@163.com"
         })
         db.job_intension.add({
             position:"炼丹师",
-            place:"关辉",
+            place:"光辉",
             salary:"5000妖灵币"
         })
         db.all_skill.add({
@@ -32,7 +32,7 @@ export const initDataBase = async ()=>{
         })
         db.work_experiense.add({
             works:[{
-                company:"关辉之城",
+                company:"光辉之城",
                 startTime:"1234年",
                 endTime:"4321年",
                 workContent:"学习"
@@ -42,7 +42,7 @@ export const initDataBase = async ()=>{
             projects:[{
                 name:"黑暗时代",
                 skill:["1","2"],
-                decription:"世界差点毁灭",
+                description:"世界差点毁灭",
                 myDuty:"保卫世界和平",
                 link:""
             }]
@@ -66,7 +66,7 @@ export const initDataBase = async ()=>{
         db.person_page.add({
             link:"http://baidu.com"
         })
-        db.edit_resume_props.add({
+        db.all_moudle.add({
             moudles:[{
                 name:"基本信息",
                 statu:"show"
@@ -115,7 +115,7 @@ export const initData = async ()=>{
     const hobby = await db.hobby.get(1)
     const personEvaluate = await db.person_evaluate.get(1)
     const personPage = await db.person_page.get(1)
-    const editResumeProps = await db.edit_resume_props.get(1)
+    const allMoudle = await db.all_moudle.get(1)
     
     dispatch(state=>{
         return {
@@ -130,7 +130,7 @@ export const initData = async ()=>{
             hobby,
             personEvaluate,
             personPage,
-            ...editResumeProps
+            ...allMoudle
         }
     })
 }

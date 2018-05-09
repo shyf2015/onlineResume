@@ -4,6 +4,7 @@ import { StoreState } from "../interfaces"
 
 
 const initState:StoreState={
+    viewState:"onlyEdit",
     baseInfo:{},
     jobIntension:{},
     workExperiense:{},

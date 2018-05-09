@@ -3,7 +3,7 @@ import { WorkExperiense } from "../../../interfaces"
 
 export default class extends Component<WorkExperiense,any>{
     render(){
-        const { works=[] } = this.props["workExperiense"]
+        const { works=[] } = this.props
         return(<div>
             <div><button className="button is-primary">工作经历</button></div>
             {

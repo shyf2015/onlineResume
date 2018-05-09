@@ -1,11 +1,10 @@
 import BaseInfoC from "../../compoments/resume/BaseInfo"
 import {connect,dispatch,getState} from "../../store"
+import { BaseInfo } from "../../../interfaces";
 
 
 
-export default connect(()=>{
+export default connect((): BaseInfo=>{
     const data = getState()
-    return {
-        baseInfo:data.baseInfo
-    }
+    return data.baseInfo
 })(BaseInfoC)

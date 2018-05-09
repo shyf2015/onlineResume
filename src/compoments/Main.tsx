@@ -3,8 +3,13 @@ import EditResume from "../containers/EditResume"
 import PreView from "../compoments/PreView"
 import Tool from "../compoments/Tool"
 
-export default class extends Component<any,any>{
+export interface MainProps{
+    viewState:string
+}
+
+export default class extends Component<MainProps,any>{
     render(){
+        const { viewState } = this.props
         return(<div className="container">
             <div className="columns">
                 <div className="column">
@@ -12,13 +17,14 @@ export default class extends Component<any,any>{
                 </div>
             </div>
             <div className="columns">
-                <div className="column is-12">
+                <div className={viewState=="onlyPreView"?"is-hidden":"column"}>
                     <EditResume/>
                 </div>
-                {/* <div className="column is-6">
+                <div className={viewState=="onlyEdit"?"is-hidden":"column"}>
                     <PreView/>
-                </div> */}
+                </div>
             </div>
+            
         </div>)
     }
 }

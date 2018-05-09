@@ -1,11 +1,10 @@
 import JobIntensionC from "../../compoments/resume/JobIntension"
-import {connect,dispatch,getState} from "../../store"
+import {connect,getState} from "../../store"
+import { JobIntension } from "../../../interfaces";
 
 
 
-export default connect(()=>{
+export default connect(():JobIntension=>{
     const data = getState()
-    return {
-        jobIntension:data.jobIntension
-    }
+    return data.jobIntension
 })(JobIntensionC)

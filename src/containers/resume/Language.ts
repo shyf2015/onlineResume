@@ -1,11 +1,10 @@
 import LanguageC from "../../compoments/resume/Language"
 import {connect,dispatch,getState} from "../../store"
+import { Language } from "../../../interfaces";
 
 
 
-export default connect(()=>{
+export default connect(():Language=>{
     const data = getState()
-    return {
-        language:data.language
-    }
+    return data.language
 })(LanguageC)

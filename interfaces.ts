@@ -46,7 +46,7 @@ export interface ProjectExperiense{
 export interface Project{
     name?:string,
     skill?:string[],
-    decription?:string,
+    description?:string,
     myDuty?:string,
     link?:string
 }
@@ -92,6 +92,11 @@ export interface Resume{
 //编辑页参数
 export interface EditResumeProps{
     moudles?:ResumeMoudle[]
+    viewState:string
+}
+
+export interface AllMoudle{
+    moudles?:ResumeMoudle[]
 }
 export interface ResumeMoudle{
     name:string,
@@ -99,6 +104,7 @@ export interface ResumeMoudle{
 }
 
 export interface StoreState{
+    viewState:"onlyEdit"|"onlyPreView"|"editAndPreView"
     baseInfo?:BaseInfo,
     jobIntension?:JobIntension,
     workExperiense?:WorkExperiense,

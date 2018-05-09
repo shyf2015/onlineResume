@@ -3,7 +3,7 @@ import { Language } from "../../../interfaces"
 
 export default class extends Component<Language,any>{
     render(){
-        const { name,level } = this.props["language"]
+        const { name,level } = this.props
         return(<div>
             <div><button className="button is-primary">语言能力</button></div>
             <div className="field is-horizontal">

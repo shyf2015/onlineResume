@@ -3,7 +3,7 @@ import { BaseInfo } from "../../../interfaces"
 
 export default class extends Component<BaseInfo,any>{
     render(){
-        const { name,age,school,major,education,workYears,homeTown,currentCity,phone,email } = this.props["baseInfo"]
+        const { name,age,school,major,education,workYears,homeTown,currentCity,phone,email } = this.props
         return(<div>
             <div><button className="button is-primary">基本信息</button></div>
             <div className="field is-horizontal">
@@ -30,7 +30,7 @@ export default class extends Component<BaseInfo,any>{
                 <div className="field-body">
                     <div className="field">
                         <p className="control">
-                            <input className="input is-primary" type="text" value={age}/>
+                            <input className="input is-primary" type="text" value={age+""}/>
                         </p>
                     </div>
                 </div>

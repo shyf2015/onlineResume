@@ -6,6 +6,7 @@ import { EditResumeProps } from "../../interfaces"
 export default connect(():EditResumeProps=>{
     const data = getState()
     return {
-        moudles:data.moudles
+        moudles:data.moudles,
+        viewState:data.viewState
     }
 })(EditResume)

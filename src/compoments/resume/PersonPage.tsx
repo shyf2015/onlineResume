@@ -3,7 +3,7 @@ import { PersonPage } from "../../../interfaces"
 
 export default class extends Component<PersonPage,any>{
     render(){
-        const { link } = this.props["personPage"]
+        const { link } = this.props
         return(<div>
             <div><button className="button is-primary">个人主页</button></div>
             <div className="field is-horizontal">

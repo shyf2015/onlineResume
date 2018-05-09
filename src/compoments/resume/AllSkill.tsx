@@ -3,7 +3,7 @@ import { AllSkill } from "../../../interfaces"
 
 export default class extends Component<AllSkill,any>{
     render(){
-        const { skills=[] } = this.props["allSkill"]
+        const { skills=[] } = this.props
         return(<div>
             <div><button className="button is-primary">掌握技能</button></div>
             {

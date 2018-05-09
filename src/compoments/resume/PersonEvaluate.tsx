@@ -3,7 +3,7 @@ import { PersonEvaluate } from "../../../interfaces"
 
 export default class extends Component<PersonEvaluate,any>{
     render(){
-        const { description } = this.props["personEvaluate"]
+        const { description } = this.props
         return(<div>
             <div><button className="button is-primary">个人评价</button></div>
             <div className="field is-horizontal">

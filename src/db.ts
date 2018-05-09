@@ -1,5 +1,5 @@
 import Dexie from 'dexie'
-import { BaseInfo,JobIntension,AllSkill,WorkExperiense,ProjectExperiense,PrizeExperiense,Language,Hobby,PersonEvaluate,PersonPage,EditResumeProps } from '../interfaces'
+import { BaseInfo,JobIntension,AllSkill,WorkExperiense,ProjectExperiense,PrizeExperiense,Language,Hobby,PersonEvaluate,PersonPage,AllMoudle } from '../interfaces'
 
 export class MyDataBase extends Dexie{
     base_info:Dexie.Table<BaseInfo,number>
@@ -12,7 +12,7 @@ export class MyDataBase extends Dexie{
     hobby:Dexie.Table<Hobby,number>
     person_evaluate:Dexie.Table<PersonEvaluate,number>
     person_page:Dexie.Table<PersonPage,number>
-    edit_resume_props:Dexie.Table<EditResumeProps,number>
+    all_moudle:Dexie.Table<AllMoudle,number>
 
     constructor(){
         super("resume_data")
@@ -27,7 +27,7 @@ export class MyDataBase extends Dexie{
             hobby:"++id",
             person_evaluate:"++id",
             person_page:"++id",
-            edit_resume_props:"++id"
+            all_moudle:"++id"
         })
     }
 }

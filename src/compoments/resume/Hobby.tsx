@@ -3,7 +3,7 @@ import { Hobby } from "../../../interfaces"
 
 export default class extends Component<Hobby,any>{
     render(){
-        const { items } = this.props["hobby"]
+        const { items } = this.props
         return(<div>
             <div><button className="button is-primary">兴趣爱好</button></div>
             <div className="field is-horizontal">

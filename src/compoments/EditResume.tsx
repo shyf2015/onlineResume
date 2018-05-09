@@ -13,9 +13,9 @@ import { EditResumeProps } from "../../interfaces"
 
 export default class extends Component<EditResumeProps,any>{
     render(){
-        const {moudles=[]} = this.props
+        const {viewState,moudles=[]} = this.props
         return (<div className="columns">
-            <div className="column is-11">
+            <div className={viewState=="onlyEdit"?"column is-11":"column is-12"}>
                 { moudles.length && moudles[0]['statu']=='show'?<BaseInfo />:'' }
                 { moudles.length && moudles[1]['statu']=='show'?<JobIntension />:'' }
                 { moudles.length && moudles[2]['statu']=='show'?<AllSkill />:'' }
@@ -28,7 +28,7 @@ export default class extends Component<EditResumeProps,any>{
                 { moudles.length && moudles[9]['statu']=='show'?<PersonPage />:'' }
                 
             </div>
-            <div className="column is-1">
+            <div className={viewState=="onlyEdit"?"column is-1":"is-hidden"}>
             {
                 moudles.map((m)=><button className={`button ${m.statu=='show'?'is-primary':''}`}>
                     {m.name}

@@ -3,7 +3,7 @@ import { JobIntension } from "../../../interfaces"
 
 export default class extends Component<JobIntension,any>{
     render(){
-        const { position,place,salary } = this.props["jobIntension"]
+        const { position,place,salary } = this.props
         return(<div>
             <div><button className="button is-primary">求职意向</button></div>
             <div className="field is-horizontal">

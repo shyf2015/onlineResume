@@ -1,11 +1,10 @@
 import AllSkillC from "../../compoments/resume/AllSkill"
 import {connect,dispatch,getState} from "../../store"
+import { AllSkill } from "../../../interfaces";
 
 
 
-export default connect(()=>{
+export default connect(():AllSkill=>{
     const data = getState()
-    return {
-        allSkill:data.allSkill
-    }
+    return data.allSkill
 })(AllSkillC)
