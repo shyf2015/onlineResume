@@ -1,23 +1,23 @@
 import { h,Component,render } from "preact"
-import { WorkExperiense } from "../../../interfaces"
+import { AllSkill } from "../../../interfaces"
 
-export default class extends Component<WorkExperiense,any>{
+export default class extends Component<AllSkill,any>{
     render(){
-        const { works=[] } = this.props["workExperiense"]
+        const { skills=[] } = this.props["allSkill"]
         return(<div>
-            <div><button className="button is-primary">工作经历</button></div>
+            <div><button className="button is-primary">掌握技能</button></div>
             {
-                works.map(work=><div>
+                skills.map(skill=><div>
                     <div className="field is-horizontal">
                         <div className="field-label is-normal">
                             <div className="label">
-                                公司:
+                                技能名称:
                             </div>
                         </div>
                         <div className="field-body">
                             <div className="field">
                                 <p className="control">
-                                    <input className="input is-primary" type="text" value={work.company}/>
+                                    <input className="input is-primary" type="text" value={skill.name}/>
                                 </p>
                             </div>
                         </div>
@@ -26,13 +26,13 @@ export default class extends Component<WorkExperiense,any>{
                     <div className="field is-horizontal">
                         <div className="field-label is-normal">
                             <div className="label">
-                                起止时间:
+                                使用时间:
                             </div>
                         </div>
                         <div className="field-body">
                             <div className="field">
                                 <p className="control">
-                                    <input className="input is-primary" type="text" value={`${work.startTime}至${work.endTime}`}/>
+                                    <input className="input is-primary" type="text" value={skill.useTime}/>
                                 </p>
                             </div>
                         </div>
@@ -41,21 +41,34 @@ export default class extends Component<WorkExperiense,any>{
                     <div className="field is-horizontal">
                         <div className="field-label is-normal">
                             <div className="label">
-                                工作内容:
+                                技能类型:
                             </div>
                         </div>
                         <div className="field-body">
                             <div className="field">
                                 <p className="control">
-                                    <input className="input is-primary" type="text" value={work.workContent}/>
+                                    <input className="input is-primary" type="text" value={skill.type}/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="field is-horizontal">
+                        <div className="field-label is-normal">
+                            <div className="label">
+                                掌握程度:
+                            </div>
+                        </div>
+                        <div className="field-body">
+                            <div className="field">
+                                <p className="control">
+                                    <input className="input is-primary" type="text" value={skill.level}/>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>)
             }
-
-
         </div>)
     }
 }

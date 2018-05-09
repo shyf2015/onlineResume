@@ -4,34 +4,72 @@ import { ProjectExperiense } from "../../../interfaces"
 
 export default class extends Component<ProjectExperiense,any>{
     render(){
-        const { projects } = this.props
+        const { projects=[] } = this.props["projectExperiense"]
         return(<div>
-            <table className="table is-fullwidth is-bordered">
-                <tr>
-                    <td colSpan={2}>项目经验</td>
-                </tr>
-                {
-                    projects.reduce((arr,project) => arr.concat([
-                        <tr>
-                            <td>名称:</td>
-                            <td><input type="text" value={project.name}/></td>
-                        </tr>,
-                        <tr>
-                            <td>使用技术和工具:</td>
-                            <td><input type="text" value={project.skill}/></td>
-                        </tr>,
-                        <tr>
-                            <td>项目描述:</td>
-                            <td><input type="text" value={project.decription}/></td>
-                        </tr>,
-                        <tr>
-                            <td>我的职责:</td>
-                            <td><input type="text" value={project.myDuty}/></td>
-                        </tr>
-                    ]), [])
-                }
-                
-            </table>
+            <div><button className="button is-primary">工作经历</button></div>
+            {
+                projects.map(project=><div>
+                    <div className="field is-horizontal">
+                        <div className="field-label is-normal">
+                            <div className="label">
+                                项目名称:
+                            </div>
+                        </div>
+                        <div className="field-body">
+                            <div className="field">
+                                <p className="control">
+                                    <input className="input is-primary" type="text" value={project.name}/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="field is-horizontal">
+                        <div className="field-label is-normal">
+                            <div className="label">
+                                使用到的技术:
+                            </div>
+                        </div>
+                        <div className="field-body">
+                            <div className="field">
+                                <p className="control">
+                                    <input className="input is-primary" type="text" value={project.skill}/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="field is-horizontal">
+                        <div className="field-label is-normal">
+                            <div className="label">
+                                项目描述:
+                            </div>
+                        </div>
+                        <div className="field-body">
+                            <div className="field">
+                                <p className="control">
+                                    <input className="input is-primary" type="text" value={project.description}/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="field is-horizontal">
+                        <div className="field-label is-normal">
+                            <div className="label">
+                                我的职责:
+                            </div>
+                        </div>
+                        <div className="field-body">
+                            <div className="field">
+                                <p className="control">
+                                    <input className="input is-primary" type="text" value={project.myDuty}/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>)
+            }
         </div>)
     }
 }

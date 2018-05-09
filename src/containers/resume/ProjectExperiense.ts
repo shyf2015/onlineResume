@@ -1,10 +1,9 @@
 import ProjectExperienseC from "../../compoments/resume/ProjectExperiense"
-import {connect,dispatch,getState} from "../../store"
-import { ProjectExperiense } from "../../../interfaces"
+import {connect,getState} from "../../store"
 
-export default connect(():ProjectExperiense=>{
+export default connect(()=>{
     const data = getState()
     return {
-        projects:data.projects
+        projectExperiense:data.projectExperiense
     }
 })(ProjectExperienseC)

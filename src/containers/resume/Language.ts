@@ -1,4 +1,4 @@
-import BaseInfoC from "../../compoments/resume/BaseInfo"
+import LanguageC from "../../compoments/resume/Language"
 import {connect,dispatch,getState} from "../../store"
 
 
@@ -6,6 +6,6 @@ import {connect,dispatch,getState} from "../../store"
 export default connect(()=>{
     const data = getState()
     return {
-        baseInfo:data.baseInfo
+        language:data.language
     }
-})(BaseInfoC)
+})(LanguageC)

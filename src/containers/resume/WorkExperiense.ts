@@ -1,10 +1,9 @@
 import WorkExperienseC from "../../compoments/resume/WorkExperiense"
-import {connect,dispatch,getState} from "../../store"
-import { WorkExperiense } from "../../../interfaces"
+import {connect,getState} from "../../store"
 
-export default connect(():WorkExperiense=>{
+export default connect(()=>{
     const data = getState()
     return {
-        works:data.works
+        workExperiense:data.workExperiense
     }
 })(WorkExperienseC)

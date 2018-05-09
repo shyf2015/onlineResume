@@ -1,4 +1,4 @@
-import BaseInfoC from "../../compoments/resume/BaseInfo"
+import HobbyC from "../../compoments/resume/Hobby"
 import {connect,dispatch,getState} from "../../store"
 
 
@@ -6,6 +6,6 @@ import {connect,dispatch,getState} from "../../store"
 export default connect(()=>{
     const data = getState()
     return {
-        baseInfo:data.baseInfo
+        hobby:data.hobby
     }
-})(BaseInfoC)
+})(HobbyC)
