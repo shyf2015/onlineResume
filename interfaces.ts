@@ -1,3 +1,5 @@
+import { Component } from "preact";
+
 
 
 //基本信息
@@ -100,7 +102,8 @@ export interface AllMoudle{
 }
 export interface ResumeMoudle{
     name:string,
-    statu:"show"|"hide"
+    statu:"show"|"hide",
+    component:string
 }
 
 export interface StoreState{

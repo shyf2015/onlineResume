@@ -69,34 +69,44 @@ export const initDataBase = async ()=>{
         db.all_moudle.add({
             moudles:[{
                 name:"基本信息",
-                statu:"show"
+                statu:"show",
+                component:"baseInfo"
             },{
                 name:"求职意向",
-                statu:"show"
+                statu:"show",
+                component:"jobIntension"
             },{
                 name:"掌握技能",
-                statu:"hide"
+                statu:"hide",
+                component:"allSkill"
             },{
                 name:"工作经历",
-                statu:"show"
+                statu:"show",
+                component:"workExperiense"
             },{
                 name:"项目经验",
-                statu:"show"
+                statu:"show",
+                component:"projectExperiense"
             },{
                 name:"获奖经历",
-                statu:"show"
+                statu:"show",
+                component:"prizePeriense"
             },{
                 name:"语言能力",
-                statu:"show"
+                statu:"show",
+                component:"language"
             },{
                 name:"兴趣爱好",
-                statu:"show"
+                statu:"show",
+                component:"hobby"
             },{
                 name:"自我评价",
-                statu:"show"
+                statu:"show",
+                component:"personEvaluate"
             },{
                 name:"个人主页",
-                statu:"show"
+                statu:"show",
+                component:"personPage"
             }]
         })
     }

@@ -6,7 +6,7 @@ export default class extends Component<ProjectExperiense,any>{
     render(){
         const { projects=[] } = this.props
         return(<div>
-            <div><button className="button is-primary">工作经历</button></div>
+            <div><button className="button is-primary">项目经验</button></div>
             {
                 projects.map(project=><div>
                     <div className="field is-horizontal">
